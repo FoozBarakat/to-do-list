@@ -3,45 +3,47 @@
 <head>
 	<title>RBK First Project</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 <body>
 	<div>
-		<div>
-			<h1> To do list</h1>
-		</div>
-		
-		<div id="addTask">
-			<input type="text" class="toDo-input" placeholder="what you want to do" > 
-			<button class="add-btn">Add Task</button>
-		</div>
 
+		<div id="container">
+			<header>
+			<h1> To do list</h1>
+			</header>
+		<div id="projects">	
 		<div  class="row" id="taskTable">
-			
+	
 			<div class="column" id="toDo"> 
-				<h3>Task to do</h3>
-				<button class="done-btn">Done</button>
-				<button class="remove-btn">Remove</button>
-				<div>
-					<ul class="do">
-					</ul>
+				<div id="title">
+					<h3>Task to do</h3>
+					<button id="btn_newList">New List</button>
+					<button id="btn_newTask">New Task</button>
 				</div>
-			</div>
-			
-			<div class="column" id="doing">
-				<h3>Task in progress</h3>
-				<div>
-					<ul>				
-					</ul>
-				</div>
+				<div id="list">
+				<ul id="tab">
+					<li><a href="#personal">Personal</a></li>
+					<li><a href="#Work">Work</a></li>
+				</ul>
+				<ol id="personal">
+					<li><input type="checkbox" > Doctor </li>
+					<li><input type="checkbox" > Doctor2 </li>
+				</ol>	
+					<ol id="Work">
+					<li><input type="checkbox" > Survey </li>
+					<li><input type="checkbox" > Finish project </li>
+				</ol>
+				<div>	
 			</div>
 			
 			<div class="column" id="done">
+
 				<h3>Task done</h3>
-				<div>
-					<ul>				
-					</ul>	
+				<div class="done">
+					
 				</div>
 			</div>
 		</div>

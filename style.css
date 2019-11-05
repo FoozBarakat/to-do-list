@@ -1,3 +1,9 @@
+html,body{
+	background-image: url('todo.jpg');
+	height:100%;
+
+}
+
 h1{
 	text-align: center;
 }
@@ -14,4 +20,18 @@ h1{
   content: "";
   display: table;
   clear: both;
+}
+.toDo-input{
+	border-style: none;
+	background: transparent; 
+	outline: none;
+}
+html::after {
+	content:'';
+	background: linear-gradient(21deg, #10abff, #1beabd);
+	height:3px;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
 }

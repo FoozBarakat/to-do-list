@@ -3,30 +3,24 @@ var tasks = [];
 $('.add-btn').on('click', function() {	
 	var $toDo = $('.toDo-input').val();
 	writeTask($toDo);
-  $('.do').append('<input class="check-task" type="checkbox"/>' + $toDo);
+	var $check = $('<i class="fa fa-check-circle" id="check"></i>');
+	var $remove = $('<i class="fa fa-minus-circle" id="remove"></i> ');
+	//var $task = $('<label >' + $toDo +'<label>')
+ 	$toDo.append($check, $remove)
+ 	$('.do').append($toDo, '<br>')
 	$toDo = $('.toDo-input').val("");
 
 });
 
-$('.done-btn').on('click', function() {
-	var $cheked = $('.check-task:checked');
+var check = $('<i class="fa fa-check-circle" id="check"> </i>').on('click',function(){
+	var p = $(this).parent();
+	p.fadeOut(function(){
+		$('.done').append(p);
+		p.fadeIn();
+	})
+	$(this).remove();
+})
 
-	if ()
-	$('#done').append( $(".check-task:checked").val() );
-
-	
-
-	// for(var i = 0 ; i <tasks.length ; i++){
-	// 	if($checked === 'on'){
-
-	// 		tasks[i]["status"] = true;
-	// 	}
-	// 	if(tasks[i]["status"] === true){
-	// 			$('#done').append($item);
-	// 	}
-	//}
-
-});
 
 function addTask(task){
 	tasks.push(task);
